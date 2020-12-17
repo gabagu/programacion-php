@@ -1,96 +1,277 @@
-<?php 
+<?php
+// Operadores de comparación (==, ===, != , <>, !==, >, <, >=, <=)
 
-//Echo es una funcion para imprimir un texto
-echo "Mi nombre es Gustavo Barrera García Urrutia";
+// == -> Igual a 
+$primerNumero = 100;
+$segundoNumero = 100;
+var_dump($primerNumero == $segundoNumero);
 
-//Constante
-const NOMBRE = "Gustavo";
+// == -> Igual a 
+$primerNumero = 100;
+$segundoNumero = '100';
+var_dump($primerNumero == $segundoNumero);
 
-//Variable
-$mainAddress = "Calle Baltazar 345 Miraflores" ;
+// === -> Identico a (Valor, Tipo de dato) 
+$primerNumero = 100;
+$segundoNumero = '100';
+var_dump($primerNumero === $segundoNumero);
 
-//Booleans
-$variableBoolean = FALSE;
-$isTrue = TRUE;
+// != -> No es Igual a 
+$primerNumero = 100;
+$segundoNumero = 200;
+var_dump($primerNumero != $segundoNumero);
 
+// <> -> No es Igual a 
+$primerNumero = 100;
+$segundoNumero = 200;
+var_dump($primerNumero <> $segundoNumero);
 
-//String
-$nombreCompleto = "Gustavo Abelardo ";
+// !== -> No es identico a (Valor, Tipo de dato) 
+$primerNumero = 100; // Integer
+$segundoNumero = '100'; // String
+var_dump($primerNumero !== $segundoNumero);
 
-$apellidoMaterno = "García Urrutia";
+// = Mayor igual que
+$primerNumero = 100;
+$segundoNumero = 100;
+var_dump($primerNumero >= $segundoNumero);
 
-//Nulo 
-$variableNula= NULL;
-echo $variableNula;
+// Incremento -- Decremento
 
-//Numeric
-$numeroEntero = 10;
+// Pre Incremento: ++$increment (Incrementa $inc en 1 y luego retorna $inc)
+$indice = 10;
+echo ++$indice;
 
+// Post Incremento: $increment++ (Retorna $inc y luego incrementa $inc en 1)
+$indice = 10;
+echo $indice++;
+echo $indice;
 
-//Double
-$numeroDecimalConUnDigito = 10.5;
-$numeroDecimalConDosDigitos = 10.54;
-$numeroDecimalConTresDigitos = 10.543;
+// Pre Decremento:
+$indice = 10;
+echo --$indice;
 
-//Arrays
+// Pre Decremento:
+$indice = 10;
+echo $indice--;
+echo $indice;
 
-$frutas = ['Manzana','Pera','Platano','Uva'];
-$manzana = $frutas[3];
+// Operador Y / AND (&&) (Es verdadero si $x y $y son verdaderos)
+$x = 100;  
+$y = 50;
+if ($x == 100 && $y == 50) {
+    echo "Hello world!";
+}
 
-$comidas = [
-    0  => 'Papa a la huancaina',
-    "1" => 'Lomo saltado',
-    1.5 => 'Sopa seca',
-    false => "Cau cau"
-];
+// Operador "O" / OR (||)
+$x = 100;  
+$y = 50;
+if ($x == 100 || $y == 80) {
+    echo "Hello world!";
+}
 
-//Expresiones
+// Operador Negación / NOT (!)
+$x = 100;  
+if ($x !== 90) {
+    echo "Hello world!";
+}
 
-$primerNumero =3;
-$segundoNumero = 5;
+// Concatenación Strings
 
-$texto = "Hola";
-$parrafo = " Mundo";
+// 
+$primerNombre = "Lino";
+$apellidoPaterno = "Espinoza";
+$apellidoMaterno = "Fernández";
 
-//Operadores Aritmeticos
+$nombreCompleto = $primerNombre .' '. $apellidoPaterno .' '. $apellidoMaterno;
+echo $nombreCompleto;
 
-$total = $primerNumero + $segundoNumero;
-$parrafo =$texto+$parrafo;
+// Estructura Condicional (IF)
+/* 
+if (condition) {
+   code to be executed if this condition is true;
+} else {
+   code to be execute if this condition is false;
+}
+*/
+// Miguel
+$miguel = 10;
+if ($miguel > 25) {
+    echo "You Winner";
+} elseif ($miguel == 18) {
+    echo "You Play Again" ;
+} else { echo "You lose"; }
 
-$suma = $primerNumero + $segundoNumero;
-$resta = $primerNumero - $segundoNumero;
-$multiplicacion = $primerNumero * $segundoNumero;
-$division = $primerNumero / $segundoNumero;
+switch ($miguel) {
+    case $miguel > 25:
+      echo " You Winner";
+      break;
+    case $miguel == 18:
+      echo "You Play Again ";
+      break;
+    default:
+      echo "You Looser";
+  }
 
-$modulo = $primerNumero % $segundoNumero;
-$potencia = $primerNumero ** $segundoNumero;
+// Elsa
+$edad = 15;
+if ($edad >= 18) {
+    echo "Es mayor de edad";
+} elseif ($edad == 80) {
+    echo "Es Miguel";
+} else {
+    echo "Es menor de edad";
+}
+switch ($edad) {
+  case ($edad >= 18):
+    echo "Es mayor de edad";
+    break;
+  case $edad == 80:
+    echo "Es Miguel";
+  break;
+  default:
+    echo "Es menor de edad";
 
+}
+// Gustavo
+/*
+$edadHermano = 20;
+$edadPrimo = 15;
+if ($edadHermano < $edadPrimo) {
+  echo "Hermano"; 
+} else {
+  echo "Primo";
+} */
+$NotaBimetre1 = 15;
+$NotaBimetre2 = 18;
+$practica = 13;
 
+if ($NotaBimetre1 > $NotaBimetre2) {
+    echo "Superaste el Nivel"; 
+} elseif ($NotaBimetre1 < $practica) {
+    echo "No Superaste el Nivel";
+}  else {
+  echo "Nivel No Logrado";
+}
 
-//Operadores de Asignaciòn
-$tercerNumero = 6;
-$tercerNumero +=5;
-$tercerNumero -=1;
-echo $tercerNumero;
+/* 
+if (condition) {
+  code to be executed if this condition is true;
+} elseif (condition) {
+  code to be executed if first condition is false and this condition is true;
+} else {
+  code to be executed
+}
+*/
 
-$saludo = "Hola ";
-$saludo .=", Buenas Noches";
+$dia = 3;
+    switch($dia){
+        case 0: 
+            echo "Lunes";
+            break;  
+        case 1:
+            echo "Martes";
+            break;  
+        case 2: 
+            echo "Miercoles";
+            break;  
+        case 3: 
+            echo "Jueves";
+            break;  
+        case 4:
+            echo "Viernes";
+            break;  
+        case 5: 
+            echo "Sabado";
+            break; 
+        default:
+            echo "Domingo";
+            
+    }
+// Switch
+/*
+switch (variableAEvaluar) {
+  case label1:
+    code to be executed if n=label1;
+    break;
+  case label2:
+    code to be executed if n=label2;
+    break;
+  case label3:
+    code to be executed if n=label3;
+    break;
+    ...
+  default:
+    code to be executed if n is different from all labels;
+}
+*/
 
-echo $saludo;
+// While Loop
+/*
+while (condition is true) {
+  code to be executed;
+}
+*/
 
-// &&  ->   AND (Proposición Y)
-// ||  ->   OR  (Proposición O)
+$numero = 10;
+while ($numero < 25) {
+  echo $numero;
+  $numero++;
+}
 
-$tercerNumero && false;
+// Do While Loop
+/*
+do {
+  code to be executed;
+} while (condition is true);
+*/
 
-?>
+$expresion = 10;
+do {
+  echo $expresion;
+  $expresion++;
+} while ($expresion < 25);
 
-<body>
-    <h1>Estoy en la clase de php</h1>
-    <p><?php echo gettype($frutas); ?></p>
+// For Loop
+/*
+for (init counter; test counter; increment counter) {
+  code to be executed for each iteration;
+}
+*/
 
-    <?php var_dump ($frutas);?>
-    <?php print_r ($frutas);?>
+for ($i = 0; $i <= 10 ; $i++) { 
+  echo $i;
+}
 
-    <?php echo $potencia ;?>
-</body>
+// For each Loop
+/*
+foreach ($array as $value) {
+  code to be executed;
+}
+*/
+
+$colors = array("red", "green", "blue", "yellow");
+
+foreach ($colors as $value) {
+  echo "$value <br>";
+}
+
+// Break
+
+for ($x = 0; $x < 10; $x++) {
+  if ($x == 4) {
+    break;
+  }
+  echo "The number is: $x <br>";
+}
+
+// Continue
+
+for ($x = 0; $x < 10; $x++) {
+  if ($x == 4) {
+    continue;
+  }
+  echo "The number is: $x <br>";
+}
+
+?> 
