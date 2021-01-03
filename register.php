@@ -57,16 +57,11 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
     // @TODO: Extrar la lógica de registro de usuarios a un función
     $hashedPassword = password_hash($password, PASSWORD_BCRYPT, array('cost' => 12));
 
-    if(usernameExists($username)==1 or emailExists($email)==1){
-      echo "El usuario ya existe";
-    }else{
-      $db->query("INSERT INTO users(username, user_email, user_password, user_role) 
-      VALUES(?,?,?,?)", array($username, $email, $hashedPassword, 'subscriber'));
-      $insertId = $db->lastInsertId();
-      $db->closeConnection();
-      $data['success'] = "Usuario " . $username . " registrado con éxito";
-    }
-
+    $db->query("INSERT INTO users(username, user_email, user_password, user_role) 
+                VALUES(?,?,?,?)", array($username, $email, $hashedPassword, 'subscriber'));
+    $insertId = $db->lastInsertId();
+    $db->closeConnection();
+    $data['success'] = "Usuario " . $username . " registrado con éxito";
   }
 }
 ?>
