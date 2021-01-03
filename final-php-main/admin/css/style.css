@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f28705aa;
+    height: 100vh;
+  }
+  #login .container #login-row #login-column #login-box {
+    margin: auto;
+    max-width: 400px;
+    height: 320px;
+    border: 1px solid #9C9C9C;
+    background-color: #f0f0f0;
+    border-radius: 3rem;
+  }
+  #login .container #login-row #login-column #login-box #login-form {
+    padding: 20px;
+  }
+  #login .container #login-row #login-column #login-box #login-form #register-link {
+    margin-top: -85px;
+  }
+
+  #login-box{
+    border: 0;
+  }
+
+  .form-group input{
+    border: 0;
+  }
+  .pt-5{
+    font-family: 'Dancing Script', cursive;
+    font-size: 3rem;
+  }
+
+  .candado{
+      margin: auto;
+      width: 100px;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+  }
+
+.btn-info {
+    color: #ffffff;
+    background-color: #f28705;
+    border-color:#f28705;
+}
+
+.btn-info:hover {
+    color: #f28705;
+    background-color: #ffffff;
+    border-color:#f28705;
+}
+
+.center{
+    text-align: center;
+}
+
+.text-info {
+    color: #f28705!important;
+}
+
+/*Principal*/
+
+.container-fluid{
+    width: 1360px;
+}
+
+.col-sm-3{
+    height: auto;
+    padding-top: 3rem;
+    padding-bottom: 13rem;
+    border-right-style: solid;
+}
+
+.col-sm-9{
+  padding-top: 3rem;
+  padding-bottom: 13rem;
+  border-right-style: solid;
+}
+
+.col-sm-9 a{
+  color: #f0f0f0;
+    font-size: 1rem;
+}
+
+#principal li a{
+    color: #f0f0f0;
+    font-size: 2rem;
+}
+
+#principal li a:hover{
+    color: black;
+    background-color: #ffffff;
+}
+
+.navbar-header a .color-blanco{
+  color: #ffffff!important;
+}
+
+.content-row-title span a{
+  color: red;
+
+}
+
+table a i .glyphicon-pencil{
+  color: red;
+}
