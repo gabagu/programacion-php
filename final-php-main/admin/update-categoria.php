@@ -7,14 +7,14 @@ $post = getSeleccionarCategoria($id);
 
 $error = array();
 
-if($_SERVER['REQUEST_METHOD'] == 'POST') {
+//if($_SERVER['REQUEST_METHOD'] == 'POST') {
 
   // Sanity de los datos
   $categoria = trim($_POST['categoria']);
 
   // Validaciones de los campos a ingresar
   if (strlen($categoria) < 4) {
-    $error['categoria'] = 'Categoria dehe ser mayor a 4 caracteres';
+    $error['categoria'] = 'Categoria debe ser mayor a 4 caracteres';
   }
 
   if (empty($categoria)) {
@@ -23,17 +23,19 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
 
   
   if(empty($error)){
-                
-    //$db->query("UPDATE categories SET cat_id = ?", array($id));
-    //$id = $_GET['id'];
-    //$categoria = $_POST['cat_title'];
-    $actualizarId = $db->getActualizarCategorie($id);
+    //$id=$_POST['cat_id']; 
+    $categoria = trim($_POST['categoria']);
+                      
+    $db->query("UPDATE categories SET cat_title = ? WHERE cat_id = ?", array($categoria, $id));
+    $insertId = $db->lastInsertId();
     $db->closeConnection();
+
     header("Location: categoria.php");
-    $data['success'] = "Categoria " . $categoria . " registrado con éxito";
+   // $actualizarId = $db->getActualizarCategorie($id);
+    //$db->closeConnection();
   }
 
-}
+//}
 
 ?>
 
@@ -75,7 +77,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
                                     
                                     <div class="form-group">
                                       <div class="col-md-offset-2 col-md-10">
-                                        <button class="btn btn-info" type="submit">Guardar</button>
+                                        <button class="btn btn-info" type="submit">Actualizar</button>
                                       </div>
                                     </div>
                                   </form>

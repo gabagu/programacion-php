@@ -1,6 +1,5 @@
 <?php
 session_start();
-
 date_default_timezone_set('America/Lima');
 
 //var_dump($_SESSION);
@@ -24,6 +23,7 @@ date_default_timezone_set('America/Lima');
       <script src="js/respond.min.js"></script>
     <![endif]-->
     <script type="text/javascript" src="js/site.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
   </head>
   <body>
     <!--nav-->
@@ -46,7 +46,7 @@ date_default_timezone_set('America/Lima');
            <li></li>
            <li><a href="#"><i class="glyphicon glyphicon-user"></i> Perfil</a></li>
            <li class="divider"></li>
-           <li><a href="#"><i class="glyphicon glyphicon-off"></i> Cerrar Sesión</a></li>
+           <li><a href="logout.php"><i class="glyphicon glyphicon-off"></i> Cerrar Sesión</a></li>
          </ul>
        </li>
      </ul>

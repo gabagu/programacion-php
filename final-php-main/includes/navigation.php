@@ -7,7 +7,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="/final">Inicio</a>
+              <a class="nav-link active" aria-current="page" href="/final-php-main/index.php">Inicio</a>
             </li>
             <?php
               $categories = getCategories();  

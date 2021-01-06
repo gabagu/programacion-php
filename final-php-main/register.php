@@ -57,8 +57,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
     // @TODO: Extrar la lógica de registro de usuarios a un función
     $hashedPassword = password_hash($password, PASSWORD_BCRYPT, array('cost' => 12));
 
-    $db->query("INSERT INTO users(username, user_email, user_password, user_role) 
-                VALUES(?,?,?,?)", array($username, $email, $hashedPassword, 'subscriber'));
+    $db->query("INSERT INTO users (user_id, username, user_password, user_firstname, user_lastname, user_email, user_image, user_role, randSalt, token) VALUES (?,?,?,?,?,?,?,?,?,?)", array($username, $email, $hashedPassword, 'subscriber'));
     $insertId = $db->lastInsertId();
     $db->closeConnection();
     $data['success'] = "Usuario " . $username . " registrado con éxito";

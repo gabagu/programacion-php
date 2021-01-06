@@ -6,6 +6,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   if(isset($_POST['username']) && isset($_POST['password'])){
       // Iniciar sesión
     loginUser($_POST['username'], $_POST['password']);
+    header("Location: index.php");
   } else {
     header("Location: /final");
   }

@@ -53,7 +53,9 @@ class Database
 		try {
 			$this->parameters = $parameters;
 			$this->sQuery = $this->pdo->prepare($this->buildParams($query, $this->parameters), $driverOptions);
-			if (!empty($this->parameters)) {
+      //echo $this->sQuery;
+      var_dump($this->sQuery);
+      if (!empty($this->parameters)) {
 				if (array_key_exists(0, $parameters)) {
 					$parametersType = true;
 					array_unshift($this->parameters, "");

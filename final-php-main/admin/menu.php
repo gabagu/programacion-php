@@ -14,22 +14,23 @@
          <li>
                   <a href="#demo2" class="list-group-item " data-toggle="collapse"><i class="glyphicon glyphicon-comment"></i>Comentarios<span class="glyphicon glyphicon-chevron-right"></span></a>
                     <li class="collapse" id="demo2">
+                    <a href="status.php" class="list-group-item"><i class=" glyphicon glyphicon-link"></i> Aprobar y Desaprobar</a>
                     <a href="categoria-registro.php" class="list-group-item"><i class=" glyphicon glyphicon-pencil"></i> Registrar</a>
-                      <a href="categoria.php" class="list-group-item"><i class="glyphicon glyphicon-list-alt"></i> Listar</a>
+                      <a href="comentario.php" class="list-group-item"><i class="glyphicon glyphicon-list-alt"></i> Listar</a>
                     </li>
          </li>
          <li>
                   <a href="#demo3" class="list-group-item " data-toggle="collapse"><i class="glyphicon glyphicon-pushpin"></i>Post<span class="glyphicon glyphicon-chevron-right"></span></a>
                     <li class="collapse" id="demo3">
-                    <a href="categoria-registro.php" class="list-group-item"><i class=" glyphicon glyphicon-pencil"></i> Registrar</a>
-                      <a href="categoria.php" class="list-group-item"><i class="glyphicon glyphicon-list-alt"></i> Listar</a>
+                    <a href="post-registro.php" class="list-group-item"><i class=" glyphicon glyphicon-pencil"></i> Registrar</a>
+                      <a href="post.php" class="list-group-item"><i class="glyphicon glyphicon-list-alt"></i> Listar</a>
                     </li>
          </li>
          <li>
                   <a href="#demo4" class="list-group-item " data-toggle="collapse"><i class="glyphicon glyphicon-user"></i>Usuarios<span class="glyphicon glyphicon-chevron-right"></span></a>
                     <li class="collapse" id="demo4">
-                    <a href="categoria-registro.php" class="list-group-item"><i class=" glyphicon glyphicon-pencil"></i> Registrar</a>
-                      <a href="categoria.php" class="list-group-item"><i class="glyphicon glyphicon-list-alt"></i> Listar</a>
+                    <a href="categoria-usuarios.php" class="list-group-item"><i class=" glyphicon glyphicon-pencil"></i> Registrar</a>
+                      <a href="usuarios.php" class="list-group-item"><i class="glyphicon glyphicon-list-alt"></i> Listar</a>
                     </li>
          </li>
 

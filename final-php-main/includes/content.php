@@ -27,7 +27,7 @@
               <section>
                 <?php echo $post['post_content']; ?>
               </section>
-              <a href="post.php?id=<?php echo $post['post_id']; ?>">Ir a la entrada</a>
+              <a href="post.php?id=<?php echo $post['post_id']; ?>" class="btn btn-primary btn-block">Ir a la entrada</a>
           <?php }
           }
           ?>
